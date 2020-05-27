@@ -187,6 +187,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location
 sprites.onOverlap(SpriteKind.Player, SpriteKind.coin, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeScoreBy(1)
+    music.magicWand.play()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (squary.vy == 0) {
